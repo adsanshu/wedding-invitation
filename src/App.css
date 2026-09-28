@@ -239,3 +239,98 @@ body,
   width: 100%;
   max-width: 520px;
 }
+.invitation-screen {
+  min-height: 100vh;
+  width: 100%;
+  padding: 60px 22px;
+  text-align: center;
+  background: #f7efe3;
+  color: #5a1f2b;
+}
+
+.invitation-screen h1 {
+  margin: 20px 0;
+  color: #8c2639;
+  font-size: 38px;
+}
+
+.invitation-screen > p {
+  line-height: 1.9;
+  color: #765b48;
+}
+
+.event-card {
+  width: min(100%, 420px);
+  margin: 35px auto;
+  padding: 30px 20px;
+  border: 1px solid rgba(184, 138, 74, 0.5);
+  border-radius: 24px;
+  background: #fffaf2;
+  box-shadow: 0 12px 30px rgba(90, 31, 43, 0.1);
+}
+
+.event-card h2 {
+  color: #8c2639;
+}
+
+.back-button {
+  padding: 11px 24px;
+  border: 1px solid #8c2639;
+  border-radius: 25px;
+  background: transparent;
+  color: #8c2639;
+}
+.events-grid {
+  width: 100%;
+  max-width: 600px;
+  margin: 35px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.event-card {
+  padding: 24px 16px;
+  border: 1px solid rgba(184, 138, 74, 0.45);
+  border-radius: 22px;
+  background: #fffaf2;
+  box-shadow: 0 10px 25px rgba(90, 31, 43, 0.08);
+}
+
+.event-icon {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+
+.event-card h2 {
+  margin: 5px 0 8px;
+  color: #8c2639;
+  font-size: 22px;
+}
+
+.event-card p {
+  margin: 0 0 12px;
+  color: #765b48;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.event-card small {
+  color: #9b6b32;
+  letter-spacing: 1px;
+}
+
+.wedding-event {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 480px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wedding-event {
+    grid-column: auto;
+  }
+}
