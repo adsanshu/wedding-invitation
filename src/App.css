@@ -377,3 +377,53 @@ body,
   color: #6f5140;
   margin: 12px 0;
 }
+.schedule-screen {
+  min-height: 100vh;
+  width: 100%;
+  padding: 30px 20px 60px;
+  background: #f7efe3;
+  color: #5a1f2b;
+  text-align: center;
+}
+
+.schedule-screen h1 {
+  color: #8c2639;
+  margin: 15px 0 30px;
+}
+
+.schedule-list {
+  width: min(100%, 600px);
+  margin: auto;
+  display: grid;
+  gap: 15px;
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+  text-align: left;
+  background: #fffaf2;
+  border: 1px solid rgba(184, 138, 74, 0.4);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(90, 31, 43, 0.07);
+}
+
+.schedule-item > span {
+  font-size: 32px;
+}
+
+.schedule-item h2 {
+  margin: 0 0 5px;
+  color: #8c2639;
+}
+
+.schedule-item p {
+  margin: 0 0 5px;
+  color: #9b6b32;
+}
+
+.schedule-item small {
+  color: #765b48;
+}
