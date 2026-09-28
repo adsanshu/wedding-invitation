@@ -1,49 +1,103 @@
+
+import { useState } from "react";
 import "./App.css";
-
 function App() {
+  const [screen, setScreen] = useState("cover");
   return (
-    <main className="wedding-cover">
+  <>
+    {screen === "invitation" && (
+  <main className="invitation-screen">
 
-      <div className="decor decor-top">✦</div>
+    <p className="small-text">॥ श्री गणेशाय नमः ॥</p>
 
-      <section className="cover-content">
+    <h1>विवाह कार्यक्रम</h1>
+
+    <p className="intro-text">
+      स्नेह एवं आशीर्वाद सहित
+      <br />
+      आपको हमारे शुभ विवाह में
+      <br />
+      सादर आमंत्रित करते हैं।
+    </p>
+
+    <section className="events-grid">
+
+      <div className="event-card">
+        <span className="event-icon">🌼</span>
+        <h2>हल्दी</h2>
+        <p>शुभ आरंभ एवं हल्दी समारोह</p>
+        <small>तिथि • समय</small>
+      </div>
+
+      <div className="event-card">
+        <span className="event-icon">🌿</span>
+        <h2>मेहंदी</h2>
+        <p>मेहंदी एवं मंगल गीत</p>
+        <small>तिथि • समय</small>
+      </div>
+
+      <div className="event-card">
+        <span className="event-icon">🪔</span>
+        <h2>तिलक</h2>
+        <p>तिलक एवं पारिवारिक मिलन</p>
+        <small>तिथि • समय</small>
+      </div>
+
+      <div className="event-card">
+        <span className="event-icon">🎶</span>
+        <h2>संगीत</h2>
+        <p>संगीत एवं सांस्कृतिक संध्या</p>
+        <small>तिथि • समय</small>
+      </div>
+
+      <div className="event-card wedding-event">
+        <span className="event-icon">💍</span>
+        <h2>शुभ विवाह</h2>
+        <p>विवाह एवं शुभ फेरे</p>
+        <small>तिथि • समय</small>
+      </div>
+
+    </section>
+
+    <button
+      className="back-button"
+      onClick={() => setScreen("cover")}
+    >
+      ← वापस
+    </button>
+
+  </main>
+)}
+    {screen === "invitation" && (
+      <main className="invitation-screen">
 
         <p className="small-text">॥ श्री गणेशाय नमः ॥</p>
 
-        <div className="mandala">❈</div>
+        <h1>विवाह कार्यक्रम</h1>
 
-        <p className="invite-text">
-          शुभ विवाह
+        <p>
+          स्नेह एवं आशीर्वाद सहित
+          <br />
+          आपको हमारे शुभ विवाह में
+          <br />
+          सादर आमंत्रित करते हैं।
         </p>
 
-        <h1>
-          Wedding
-          <span>Invitation</span>
-        </h1>
-
-        <div className="divider">
-          <span>✦</span>
+        <div className="event-card">
+          <h2>💍 शुभ विवाह</h2>
+          <p>एक नई शुरुआत, एक नया सफर</p>
         </div>
 
-        <p className="couple-name">
-          Bride <span>&</span> Groom
-        </p>
-
-        <p className="date">
-          00 • 00 • 2026
-        </p>
-
-        <button className="open-button">
-          आमंत्रण खोलें
-          <span> →</span>
+        <button
+          className="back-button"
+          onClick={() => setScreen("cover")}
+        >
+          ← वापस
         </button>
 
-      </section>
-
-      <div className="decor decor-bottom">✦</div>
-
-    </main>
-  );
+      </main>
+    )}
+  </>
+);
 }
-
 export default App;
