@@ -466,14 +466,199 @@ function App() {
       </p>
 
       <input
-        type="password"
-        className="code-input"
-        placeholder="Secret Code"
-      />
+  type="password"
+  className="code-input"
+  placeholder="Secret Code"
+  value={secretCode}
+  onChange={(e) => setSecretCode(e.target.value)}
+/>
 
-      <button className="unlock-button">
-        🔓 Unlock
-      </button>
+      <button
+  className="unlock-button"
+  onClick={() => {
+    if (secretCode === "2026") {
+      setUnlocked(true);
+    } else {
+      alert("गलत Secret Code");
+    }
+  }}
+>
+  🔓 Unlock
+</button>
+      {unlocked && (
+  <div className="memories-unlocked">
+    <h2>💖 हमारी खास यादें</h2>
+
+    <p>
+      Secret code सही है।
+      <br />
+      अब यहाँ आपकी private photos और memories दिखाई देंगी।
+    </p>
+
+    <div className="memory-placeholder">
+      📸
+      <span>Photo Memory</span>
+    </div>
+
+    <div className="memory-placeholder">
+      🎥
+      <span>Video Memory</span>
+    </div>
+    <button
+  className="venue-button"
+  onClick={() => setScreen("wedding-diary")}
+>
+  📖 Wedding Diary देखें
+</button>
+  </div>
+)}
+    </section>
+  </main>
+)}
+      {/* WEDDING DIARY */}
+{screen === "wedding-diary" && (
+  <main className="wedding-diary-screen">
+    <button
+      className="back-button"
+      onClick={() => setScreen("private")}
+    >
+      ← वापस
+    </button>
+
+    <section className="wedding-diary-card">
+      <p className="small-text">॥ हमारी कहानी ॥</p>
+
+      <h1>Wedding Diary</h1>
+
+      <div className="timeline">
+
+        <div className="timeline-item">
+          <div className="timeline-icon">💖</div>
+          <div>
+            <h2>पहली मुलाकात</h2>
+            <p>
+              हमारी खूबसूरत कहानी की शुरुआत।
+            </p>
+          </div>
+        </div>
+
+        <div className="timeline-item">
+          <div className="timeline-icon">💍</div>
+          <div>
+            <h2>सगाई</h2>
+            <p>
+              एक नए रिश्ते की खूबसूरत शुरुआत।
+            </p>
+          </div>
+        </div>
+
+        <div className="timeline-item">
+          <div className="timeline-icon">🪔</div>
+          <div>
+            <h2>विवाह</h2>
+            <p>
+              दो दिलों और दो परिवारों का मिलन।
+            </p>
+          </div>
+        </div>
+
+        <div className="timeline-item">
+          <div className="timeline-icon">✨</div>
+          <div>
+            <h2>नई शुरुआत</h2>
+            <p>
+              साथ मिलकर एक नई जिंदगी की ओर।
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <button
+  className="venue-button"
+  onClick={() => setScreen("gallery")}
+>
+  📸 Photo & Video Memories
+</button>
+    </section>
+  </main>
+)}
+
+{/* MEMORIES GALLERY */}
+{screen === "gallery" && (
+  <main className="gallery-screen">
+    <button
+      className="back-button"
+      onClick={() => setScreen("wedding-diary")}
+    >
+      ← वापस
+    </button>
+
+    <section className="gallery-card">
+      <p className="small-text">॥ हमारी यादें ॥</p>
+
+      <h1>Photo & Video Memories</h1>
+
+      <div className="gallery-grid">
+        <div className="gallery-item">
+          <span>📸</span>
+          <p>Wedding Photo</p>
+        </div>
+
+        <div className="gallery-item">
+          <span>📸</span>
+          <p>Family Memory</p>
+        </div>
+
+        <div className="gallery-item">
+          <span>🎥</span>
+          <p>Wedding Video</p>
+        </div>
+
+        <div className="gallery-item">
+          <span>📸</span>
+          <p>Special Moment</p>
+        </div>
+      </div>
+      <button
+  className="venue-button"
+  onClick={() => setScreen("future")}
+>
+  ✨ Future Memories
+</button>
+    </section>
+  </main>
+)}
+
+      {/* FUTURE MEMORIES */}
+{screen === "future" && (
+  <main className="future-screen">
+    <button
+      className="back-button"
+      onClick={() => setScreen("gallery")}
+    >
+      ← वापस
+    </button>
+
+    <section className="future-card">
+      <p className="small-text">॥ आने वाला कल ॥</p>
+
+      <h1>Future Memories</h1>
+
+      <div className="future-icon">✨</div>
+
+      <p className="future-text">
+        आज की खुशियाँ कल की खूबसूरत यादें बनेंगी।
+      </p>
+
+      <div className="future-memory">
+        <span>💭</span>
+        <p>यहाँ भविष्य की नई यादें जोड़ी जाएँगी।</p>
+      </div>
+
+      <div className="future-memory">
+        <span>❤️</span>
+        <p>हमारी आने वाली खूबसूरत कहानी...</p>
+      </div>
     </section>
   </main>
 )}
