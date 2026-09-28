@@ -96,4 +96,127 @@ button {
 
 .cover-content h1 {
   margin: 10px 0 0;
-  color: #5a1f
+  color: #5a1f2b;
+  font-size: clamp(38px, 11vw, 64px);
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.cover-content h1 span {
+  display: block;
+  margin-top: 8px;
+  color: #9b6b32;
+  font-size: 0.42em;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 30px auto;
+  max-width: 220px;
+  color: #b88a4a;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: #b88a4a;
+  opacity: 0.6;
+}
+
+.divider span {
+  font-size: 13px;
+}
+
+.couple-name {
+  margin: 0;
+  color: #5a1f2b;
+  font-size: 23px;
+}
+
+.couple-name span {
+  color: #b88a4a;
+  margin: 0 8px;
+}
+
+.date {
+  margin: 14px 0 30px;
+  color: #8b6b50;
+  font-size: 14px;
+  letter-spacing: 3px;
+}
+
+.open-button {
+  border: 1px solid #8c2639;
+  border-radius: 30px;
+  padding: 13px 28px;
+  background: #8c2639;
+  color: #fffaf2;
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.open-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(140, 38, 57, 0.25);
+}
+
+.decor {
+  position: absolute;
+  color: #b88a4a;
+  font-size: 45px;
+  opacity: 0.45;
+  z-index: 1;
+}
+
+.decor-top {
+  top: 35px;
+  right: 30px;
+}
+
+.decor-bottom {
+  bottom: 35px;
+  left: 30px;
+}
+
+@media (max-width: 480px) {
+  .wedding-cover {
+    padding: 18px;
+  }
+
+  .cover-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 40px 20px;
+    border-radius: 22px;
+  }
+
+  .cover-content h1 {
+    font-size: clamp(36px, 12vw, 52px);
+    overflow-wrap: anywhere;
+  }
+
+  .invite-text {
+    font-size: 24px;
+  }
+
+  .couple-name {
+    font-size: 20px;
+  }
+
+  .decor {
+    font-size: 32px;
+  }
+
+  .open-button {
+    max-width: 100%;
+  }
+}i
