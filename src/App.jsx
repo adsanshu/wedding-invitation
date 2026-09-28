@@ -3,6 +3,7 @@ import { useState } from "react";
 import "./App.css";
 function App() {
   const [screen, setScreen] = useState("cover");
+const [selectedEvent, setSelectedEvent] = useState(null);
   return (
   <>
     {screen === "invitation" && (
