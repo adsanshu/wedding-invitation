@@ -334,3 +334,46 @@ body,
     grid-column: auto;
   }
 }
+.event-detail-screen {
+  min-height: 100vh;
+  width: 100%;
+  padding: 30px 20px 60px;
+  background: #f7efe3;
+  color: #5a1f2b;
+}
+
+.detail-card {
+  width: min(100%, 520px);
+  margin: 45px auto 0;
+  padding: 45px 25px;
+  text-align: center;
+  background: #fffaf2;
+  border: 1px solid rgba(184, 138, 74, 0.45);
+  border-radius: 28px;
+  box-shadow: 0 15px 35px rgba(90, 31, 43, 0.1);
+}
+
+.detail-icon {
+  font-size: 55px;
+}
+
+.detail-card h1 {
+  color: #8c2639;
+  margin: 15px 0;
+}
+
+.detail-card > p {
+  color: #765b48;
+  line-height: 1.7;
+}
+
+.detail-info {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(184, 138, 74, 0.35);
+}
+
+.detail-info p {
+  color: #6f5140;
+  margin: 12px 0;
+}
