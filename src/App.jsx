@@ -234,8 +234,74 @@ function App() {
 
           </div>
 
+                <button
+        className="schedule-button"
+        onClick={() => setScreen("schedule")}
+      >
+        📅 पूरा कार्यक्रम देखें
+      </button>
+          
         </main>
       )}
+
+      {/* SCHEDULE */}
+{screen === "schedule" && (
+  <main className="schedule-screen">
+    <button
+      className="back-button"
+      onClick={() => setScreen("event-detail")}
+    >
+      ← वापस
+    </button>
+
+    <section className="schedule-card">
+      <p className="small-text">॥ शुभ विवाह ॥</p>
+
+      <h1>पूरा कार्यक्रम</h1>
+
+      <div className="schedule-item">
+        <span>🌼</span>
+        <div>
+          <h2>हल्दी</h2>
+          <p>तिथि • समय • स्थान</p>
+        </div>
+      </div>
+
+      <div className="schedule-item">
+        <span>🌿</span>
+        <div>
+          <h2>मेहंदी</h2>
+          <p>तिथि • समय • स्थान</p>
+        </div>
+      </div>
+
+      <div className="schedule-item">
+        <span>🪔</span>
+        <div>
+          <h2>तिलक</h2>
+          <p>तिथि • समय • स्थान</p>
+        </div>
+      </div>
+
+      <div className="schedule-item">
+        <span>🎶</span>
+        <div>
+          <h2>संगीत</h2>
+          <p>तिथि • समय • स्थान</p>
+        </div>
+      </div>
+
+      <div className="schedule-item">
+        <span>💍</span>
+        <div>
+          <h2>शुभ विवाह</h2>
+          <p>तिथि • समय • स्थान</p>
+        </div>
+      </div>
+    </section>
+  </main>
+)}
+      
     </>
   );
 }
