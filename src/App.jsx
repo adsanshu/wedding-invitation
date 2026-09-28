@@ -4,7 +4,8 @@ import "./App.css";
 function App() {
   const [screen, setScreen] = useState("cover");
   const [selectedEvent, setSelectedEvent] = useState(null);
-
+  const [secretCode, setSecretCode] = useState("");
+  const [unlocked, setUnlocked] = useState(false);
   return (
     <>
       {/* COVER */}
@@ -298,6 +299,181 @@ function App() {
           <p>तिथि • समय • स्थान</p>
         </div>
       </div>
+      <button
+  className="venue-button"
+  onClick={() => setScreen("venue")}
+>
+  📍 विवाह स्थल देखें
+</button>
+
+      <button
+  className="venue-button"
+  onClick={() => setScreen("family")}
+>
+  👨‍👩‍👧‍👦 हमारा परिवार देखें
+</button>
+
+      
+    </section>
+  </main>
+)}
+    {/* VENUE */}
+{screen === "venue" && (
+  <main className="venue-screen">
+    <button
+      className="back-button"
+      onClick={() => setScreen("schedule")}
+    >
+      ← कार्यक्रम
+    </button>
+
+    <section className="venue-card">
+      <div className="venue-icon">📍</div>
+
+      <p className="small-text">॥ विवाह स्थल ॥</p>
+
+      <h1>शुभ विवाह स्थल</h1>
+
+      <p className="venue-name">
+        Wedding Venue
+      </p>
+
+      <p className="venue-address">
+        यहाँ विवाह स्थल का पूरा पता
+        <br />
+        शहर • जिला • राज्य
+      </p>
+
+      <a
+  className="map-button"
+  href="https://www.google.com/maps"
+  target="_blank"
+  rel="noreferrer"
+>
+  📍 Google Maps पर देखें
+</a>
+    </section>
+  </main>
+)}  
+
+      {/* FAMILY */}
+{screen === "family" && (
+  <main className="family-screen">
+    <button
+      className="back-button"
+      onClick={() => setScreen("schedule")}
+    >
+      ← वापस
+    </button>
+
+    <section className="family-card">
+      <p className="small-text">॥ परिवार ॥</p>
+
+      <h1>हमारा परिवार</h1>
+
+      <div className="family-section">
+        <h2>👨‍👩‍👦 वर पक्ष</h2>
+        <p>पिता जी • माता जी</p>
+        <p>भाई • बहन</p>
+      </div>
+
+      <div className="family-section">
+        <h2>👨‍👩‍👧 वधू पक्ष</h2>
+        <p>पिता जी • माता जी</p>
+        <p>भाई • बहन</p>
+      </div>
+
+      <p className="family-message">
+        दोनों परिवारों की ओर से
+        <br />
+        आपका हार्दिक स्वागत है।
+      </p>
+    </section>
+  </main>
+)}
+
+
+      {/* DIARY */}
+{screen === "diary" && (
+  <main className="diary-screen">
+    <button
+      className="back-button"
+      onClick={() => setScreen("family")}
+    >
+      ← वापस
+    </button>
+
+    <section className="diary-card">
+      <p className="small-text">॥ हमारी डायरी ॥</p>
+
+      <h1>एक खास याद</h1>
+
+      <div className="diary-icon">💌</div>
+
+      <p className="diary-text">
+        यह दिन हमारे जीवन की एक खूबसूरत
+        <br />
+        शुरुआत और एक नई याद है।
+      </p>
+
+      <div className="diary-date">
+        📅 जल्द ही तारीख यहाँ होगी
+      </div>
+
+      <p className="diary-message">
+        आपकी उपस्थिति और आशीर्वाद
+        <br />
+        हमारे लिए बहुत खास है।
+      </p>
+      <button
+  className="venue-button"
+  onClick={() => setScreen("diary")}
+>
+  💌 हमारी डायरी देखें
+</button>
+      <button
+  className="venue-button"
+  onClick={() => setScreen("private")}
+>
+  🔐 Private Memories
+</button>
+      
+    </section>
+  </main>
+)}
+
+      {/* PRIVATE MEMORIES */}
+{screen === "private" && (
+  <main className="private-screen">
+    <button
+      className="back-button"
+      onClick={() => setScreen("diary")}
+    >
+      ← वापस
+    </button>
+
+    <section className="private-card">
+      <div className="lock-icon">🔐</div>
+
+      <p className="small-text">॥ निजी स्मृतियाँ ॥</p>
+
+      <h1>Private Memories</h1>
+
+      <p className="private-text">
+        इन खास यादों को देखने के लिए
+        <br />
+        अपना secret code दर्ज करें।
+      </p>
+
+      <input
+        type="password"
+        className="code-input"
+        placeholder="Secret Code"
+      />
+
+      <button className="unlock-button">
+        🔓 Unlock
+      </button>
     </section>
   </main>
 )}
